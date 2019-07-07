@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Vuejs]]></title>
+    <url>%2F2019%2F07%2F07%2FVueJs%2F</url>
+    <content type="text"><![CDATA[VuejsDemo-1&gt;简单使用 和传统操作Dom元素来看 vue 无需关心DOM 只需操作数据即可 12345678910111213141516171819202122232425&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;script src=&quot;./vue..js&quot;&gt;&lt;/script&gt; &lt;title&gt;Document&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;div id=&quot;app&quot;&gt;&#123;&#123;content&#125;&#125;&lt;/div&gt; // 插值表达式 &lt;script&gt; var app = new Vue(&#123; el: &apos;#app&apos;, // 挂载点 data: &#123; content: &apos;hello vue&apos; &#125; &#125;) &lt;!--2秒后改变值--&gt; setTimeout(function() &#123; app.$data.content = &apos;vue js&apos; &#125;,2000) &lt;/script&gt;&lt;/body&gt;&lt;/html&gt; Demo-2&gt;实现一个简单的ToduList123456789101112131415161718192021222324252627282930313233&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;script src=&quot;./vue..js&quot;&gt;&lt;/script&gt; &lt;title&gt;Document&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;div id=&quot;app&quot;&gt; &lt;input type = &quot;text&quot; v-model = &apos;inputValue&apos;/&gt; &lt;button v-on:click = &apos;handelBtnClick&apos;&gt;提交&lt;/button&gt; &lt;ul&gt; &lt;li v-for = &apos;item in list&apos;&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;script&gt; var app = new Vue(&#123; el: &apos;#app&apos;, data: &#123; list: [], inputValue: &apos;&apos; &#125;, methods: &#123; handelBtnClick: function() &#123; this.list.push(this.inputValue) this.inputValue = &apos;&apos; &#125; &#125; &#125;) &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
+      <categories>
+        <category>Vuejs</category>
+      </categories>
+      <tags>
+        <tag>Vuejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[SpringBoot+SpringCloud 常用注解]]></title>
+    <url>%2F2019%2F07%2F06%2Fboot%2F</url>
+    <content type="text"><![CDATA[SpringBoot+SpringCloud 常用注解注解 @Configuration 基本配置类@EnableCaching 在配置类(@Configuration)上使用@EnableCaching注解时，会触发一个post processor，这会扫描每一个springbean，查看是否已经存在注解对应的缓存。如果找到了，就会自动创建一个代理拦截方法调用，使用缓存的bean执行处理。@Order 定义Spring容器加载Bean的顺序 数字越小优先级越高@MapperScan 指定要扫描的Mapper类的包的路径@Slf4j如果不想每次都写private final Logger logger = LoggerFactory.getLogger(XXX.class); 可以用注解@Slf4j 使用时 log.info()@EnableConfigurationProperties 使使用 @ConfigurationProperties 注解的类生效@ConfigurationProperties把配置文件的信息，读取并自动封装成实体类@EnableAspectJAutoProxy 开启AspectJ 自动代理模式,如果不填proxyTargetClass=true，默认为false@AllArgsConstructor使用后添加一个构造函数，该构造函数含有所有已声明字段属性参数@NoArgsConstructor使用后创建一个无参构造函数@Data 使用这个注解，就不用再去手写Getter,Setter,equals,canEqual,hasCode,toString等方法了，注解后在编译时会自动加进去@Builder 关于Builder较为复杂一些，Builder的作用之一是为了解决在某个类有很多构造函数的情况，也省去写很多构造函数的麻烦，在设计模式中的思想是：用一个内部类去实例化一个对象，避免一个类出现过多构造函数@Bean 向spring容器注入一个bean@EnableAsync 可以异步执行，就是开启多线程的意思。可以标注在方法、类上。@EnableScheduling 开启计划任务支持@Autowired 自动装配Bean@ConditionalOnProperty控制某个configuration是否生效。具体操作是通过其两个属性name以及havingValue来实现的，其中name用来从application.properties中读取某个属性值，如果该值为空，则返回false;如果值不为空，则将该值与havingValue指定的值进行比较，如果一样则返回true;否则返回false。如果返回值为false，则该configuration不生效；为true则生效。@ApiModelProperty作为字段的描述@ApiModel描述返回对象的意义@AutoConfigureBefore这个和 @AutoConfigureAfter 注解使用相反，表示该自动配置类需要在另外指定的自动配置类配置之前。@ConditionalOnMissingBean作用在@bean定义上，它的作用就是在容器加载它作用的bean时，检查容器中是否存在目标类型（ConditionalOnMissingBean注解的value值）的bean了，如果存在这跳过原始bean的BeanDefinition加载动作。@EventListener是Spring为我们提供的一个事件监听、订阅的实现，内部实现原理是观察者设计模式，设计初衷也是为了系统业务逻辑之间的解耦，提高可扩展性以及可维护性。事件发布者并不需要考虑谁去监听，监听具体的实现内容是什么，发布者的工作只是为了发布事件而已。@Async 异步调用@EnableSwagger2 开启swagger @EnableSwaggerBootstrapUI 开启swagger ui@Profile通过不同的环境读取不同的配置文件@SpringCloudApplication 和springbootApplication 差不多 比其更强大@EnableFeignClients 启用feign客户端]]></content>
+      <categories>
+        <category>SpringBoot</category>
+      </categories>
+      <tags>
+        <tag>SpringBoot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Srping AOP]]></title>
+    <url>%2F2019%2F06%2F22%2FSrping%20AOP%2F</url>
+    <content type="text"><![CDATA[Srping AOP 使用切面增加Dao层 参数 可用来插入日志 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970@Aspect@Component@Configurationpublic class DaoAspect &#123; private static final String createBy = &quot;createBy&quot;; private static final String createTime = &quot;createTime&quot;; private static final String lastUpdateBy = &quot;lastUpdateBy&quot;; private static final String lastUpdateTime = &quot;lastUpdateTime&quot;; @Pointcut(&quot;execution(* com.louis.kitty.*.dao.*.update*(..))&quot;) public void daoUpdate() &#123; &#125; @Pointcut(&quot;execution(* com.louis.kitty.*.dao.*.insert*(..))&quot;) public void daoCreate() &#123; &#125; @Around(&quot;daoUpdate()&quot;) public Object doAroundUpdate(ProceedingJoinPoint pjp) throws Throwable &#123; ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes(); //获取request 上下文请求 if (attributes == null) &#123; return pjp.proceed(); //调用了目标方法，并获取其返回值； &#125; HttpServletRequest request = attributes.getRequest(); String token = request.getHeader(&quot;token&quot;); String username = getUserName(); if (token != null &amp;&amp; username != null) &#123; Object[] objects = pjp.getArgs();//获取当前方法请求的参数对象 if (objects != null &amp;&amp; objects.length &gt; 0) &#123; for (Object arg : objects) &#123; BeanUtils.setProperty(arg, lastUpdateBy, username);//绑定参数对象 BeanUtils.setProperty(arg, lastUpdateTime, new Date()); &#125; &#125; &#125; Object object = pjp.proceed(); return object; &#125; @Around(&quot;daoCreate()&quot;) public Object doAroundCreate(ProceedingJoinPoint pjp) throws Throwable &#123; ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes(); if (attributes == null) &#123; return pjp.proceed(); &#125; Object[] objects = pjp.getArgs(); if (objects != null &amp;&amp; objects.length &gt; 0) &#123; for (Object arg : objects) &#123; String username = getUserName(); if (username != null) &#123; if (StringUtils.isBlank(BeanUtils.getProperty(arg, createBy))) &#123; BeanUtils.setProperty(arg, createBy, username); &#125; if (StringUtils.isBlank(BeanUtils.getProperty(arg, createTime))) &#123; BeanUtils.setProperty(arg, createTime, new Date()); &#125; &#125; &#125; &#125; Object object = pjp.proceed(); return object; &#125; private String getUserName() &#123; return SecurityUtils.getUsername(); &#125;&#125;]]></content>
+      <categories>
+        <category>SpringAop</category>
+      </categories>
+      <tags>
+        <tag>SpringAop</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[你好，inibu]]></title>
     <url>%2F2019%2F06%2F15%2Fhello-hexo%2F</url>
     <content type="text"><![CDATA[这是我的第一篇博客，你好，NIBU。]]></content>
